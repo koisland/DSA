@@ -136,9 +136,21 @@ for (j = 1; j < p; j = j * 2) {
 ```
 for i in (i=0; i < n; i++){
     for j in (j=1; j < n; j = j * 2) {
-
+        stmt;
     }
 }
 ```
 
-https://youtu.be/9SgLBjXqwd4?list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O&t=704
+`n (1st loop increment) + n log n (2nd loop increment) + n log n (stmt) = 2n log n + n = n log n` 
+
+
+### Summary
+
+| loop | time |
+|-|-|
+|`for(i=0; i < n, i++)`|O(n)|
+|`for(i=0; i < n, i=i+2)`|n/2 = O(n)|
+|`for(i=n; i > 1, i--)`|O(n)|
+|`for(i=1; i < n, i=i*2)`|O(log_2(n))|
+|`for(i=1; i < n, i=i*3)`|O(log_3(n))|
+|`for(i=n; i > 1, i=1/2)`|O(log_2(n))|
