@@ -1,5 +1,7 @@
 https://www.youtube.com/watch?v=A03oI0znAoc&list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O&index=11
 
+https://www.youtube.com/watch?v=Nd0XDY-jVHs&list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O&index=12
+
 # Asymptotic Notations
 |Symbol|Pronunciation|Definition|
 |-|-|-|
@@ -51,3 +53,31 @@ Example: `f(n) = 2n + 3`
 **Not to be confused for best case or worst case.**
 * Big-Oh not restricted for worst-case.
 * **Any notation can be used for either.**
+
+
+# More Examples
+
+### n!
+`f(n) = n!` = `n * (n-1) * (n-2) * ... 3 * 2 * 1`
+
+Can also be described as `1 * 2 * 3 ... * n`
+
+The representation of the equality.
+* `1 * 1 * 1 .. * 1` <= `1 * 2 * 3 ... * n` <= `n * n * n ... * n`
+* Which simplifies to `1 <= n! <= n ^ n`
+* Because the sides do not share the same variable, the average theta cannot be calculated.
+* `Ω(1)` is lower bound.
+* `O(n^n)` is upper bound.
+
+### log n!
+
+`f(n) = log n!`
+* `log(1 * 1 * 1 .. * 1)` <= `log(1 * 2 * 3 ... * n)` <= `log(n * n * n ... * n)`
+* Which simplifies to `1 <= log n! <= log n ^ n` and then into **`1 <= log n! <= n log n`**
+* `Ω(1)` is lower bound.
+* `O(n log n)` is upper bound.
+
+### Take-aways
+1. Use Big-Oh when you're not sure of the exact value.
+2. Always use a notation that is closest to the best representation of an algo. Usually theta `Θ`.
+3. Any notation can be used for worst-case or best-case of an algo.
